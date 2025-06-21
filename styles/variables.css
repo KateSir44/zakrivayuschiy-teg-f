@@ -1,6 +1,6 @@
 :root {
-  --font-family-basic: "Inter Variable", "OpenSans";
-  --font-family-accent: "Press Start 2P", "Press Start", "Roboto Mono";
+  --font-family-basic: "Inter Variable", sans-serif;
+  --font-family-accent: "Press Start 2P", fantasy, sans-serif;
   --fs-header-logo: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --fs-header-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --fw-title: 700;

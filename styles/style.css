@@ -17,10 +17,11 @@
     );
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--fw-text);
-  max-inline-size: 43.75rem;
+  max-inline-size: 700px;
 }
 
 .header {
@@ -67,7 +68,7 @@
   padding: 5px 0 3px 10px;
   font-family: var(--font-family-basic);
   font-size: var(--fs-card-text);
-  line-height: 22px;
+  line-height: 1.2;
   font-variation-settings: "wght" var(--fw-title);
 }
 
@@ -98,56 +99,50 @@
   display: block;
   border-block-end: var(--border);
   object-fit: cover;
+  object-position: center;
   background-color: var(--bg-color-picture);
   inline-size: 100%;
   aspect-ratio: 1 / 1;
 }
 
-.picture__start {
+.picture__opacity {
   filter: opacity(0.6);
 }
 
-.picture__clean {
+.picture__mix-filter {
   filter: saturate(0.9) blur(5px);
 }
 
-.picture__to-the-top {
+.picture__contrast {
   filter: contrast(0.9);
 }
 
-.picture__ideal {
+.picture__invert {
   filter: invert(1);
 }
 
-.picture__family {
+.picture__saturate {
   filter: saturate(0.8);
 }
 
-.picture__choice {
-  filter: opacity(0.8) saturate(0.8);
-}
-
-.picture__relax {
+.picture__grayscale {
   filter: grayscale(0.3);
 }
 
-.picture__here {
+.picture__hue-rotate {
   filter: hue-rotate(20deg);
 }
 
 .card__text-block {
-  margin: 25px;
+  margin: 25px 25px 0 25px;
 }
 
 .card__text {
+  padding-block-end: 25px;
   font-family: var(--font-family-basic);
   font-size: var(--fs-card-text);
   line-height: 21px;
   font-variation-settings: "wght" var(--fw-text);
-}
-
-.card__text-autor {
-  padding-block-start: 27px;
 }
 
 .buttons {
@@ -173,24 +168,18 @@
   border: var(--border);
 }
 
-.main-body {
-  transition: fill 0.3s 0.05s ease-in-out;
-}
-
-.core {
-  transition: fill 0.3s 0.05s ease-in-out;
-}
-
 .sparks {
   opacity: 0;
 }
 
 .card__icon-button:hover .core {
   fill: var(--contour-color);
+  transition: fill 0.3s ease-out;
 }
 
 .like-icon:hover .main-body {
   fill: var(--contour-color);
+  transition: fill 0.3s ease-in;
 }
 
 .like-icon {
@@ -201,22 +190,27 @@
 
 .like-icon:active .core {
   fill: var(--animation-fill-color);
+  transition: fill 0.3s ease-out;
 }
 
 .like-icon:active .main-body {
   fill: var(--animation-fill-color);
+  transition: fill 0.3s ease-in;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color);
+  transition: fill 0.3s ease-in;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--animation-fill-color);
+  transition: fill 0.3s ease-in;
 }
 
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color);
+  transition: fill 0.3s ease;
 }
 
 .button {
@@ -225,6 +219,7 @@
   overflow: hidden;
   color: var(--color-hover-button);
   background-color: var(--color-hover-button);
+  transition: 0.3s ease, background-color 0.2s linear;
   cursor: pointer;
 }
 
@@ -247,13 +242,12 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--contour-color);
-  transition: 0.3s ease;
 }
 
 .card__like-button {
+  padding: 7px 0;
   background-color: var(--bg-color-block);
   min-inline-size: 130px;
-  min-block-size: 40px;
 }
 
 .button__text {
@@ -272,7 +266,6 @@
   margin-block-end: 103px;
   padding: 15px 20px;
   background-color: var(--bg-color-block);
-  transition: background-color 0.2s linear;
 }
 
 .floppy-icon {
@@ -289,7 +282,6 @@
   margin: auto;
   padding: 30px;
   overflow: hidden;
-  max-block-size: 191px;
   max-inline-size: 353px;
 }
 
