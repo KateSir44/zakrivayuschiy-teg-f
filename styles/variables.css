@@ -1,1 +1,20 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-family-basic: "Inter Variable", "OpenSans";
+  --font-family-accent: "Press Start 2P", "Press Start", "Roboto Mono";
+  --fs-header-logo: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --fs-header-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --fw-title: 700;
+  --fw-text: 400;
+  --fs-card-text: 18px;
+  --bg-color-linear: #d3d3d3;
+  --bg-gradient-light: #e7e7e7;
+  --bg-gradient-dark: #1a1a1a;
+  --bg-color-pege: rgb(175, 175, 179);
+  --bg-color-block: rgb(255, 255, 255);
+  --border: 2px solid rgb(0, 0, 0);
+  --text-stroke-color: rgb(255, 255, 255);
+  --color-hover-button:  rgb(255, 255, 255);
+  --contour-color: rgb(0, 0, 0);
+  --animation-fill-color: rgb(255, 0, 0);
+  --bg-color-picture: rgba(136, 55, 109, 0.705);
+}
